@@ -14,9 +14,19 @@ exports.min = function min (array) {
 }
 
 exports.max = function max (array) {
-  return 0;
+  if (!array || array.length===0) {
+    return 0;
+  } else {
+    let maxValue = array[0];
+    for (let i=0; i < array.length; i++) {
+      if (maxValue < array[i]) {
+        maxValue = array[i];
+      } 
+    }
+    return maxValue;
+  }
 }
 
 exports.avg = function avg (array) {
-  return 0;
+
 }
